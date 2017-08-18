@@ -8,7 +8,6 @@ services:
       image: tianon/true
       volumes:
         - ${APPLICATION}:/var/www
-        - /home/${USER_NAME}/.ssh:/home/laradock/.ssh
 
 ### Workspace Utilities Container ###########################
 
@@ -41,6 +40,8 @@ services:
         dockerfile: "Dockerfile-${PHP_VERSION}"
       volumes_from:
         - applications
+      volumes:
+        - /home/${USER_NAME}/.ssh:/home/laradock/.ssh
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
       ports:
