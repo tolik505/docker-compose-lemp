@@ -70,6 +70,14 @@ RUN if [ ${INSTALL_SOAP} = true ]; then \
 ;fi
 
 #####################################
+# Supervisor:
+#####################################
+USER root
+
+RUN  apt-get -y install supervisor
+COPY ./supervisor /etc/supervisor/conf.d
+
+#####################################
 # Set Timezone
 #####################################
 
@@ -558,3 +566,6 @@ RUN apt-get clean && \
 
 # Set default work directory
 WORKDIR /var/www
+
+COPY ./entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
