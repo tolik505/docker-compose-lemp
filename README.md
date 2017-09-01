@@ -41,7 +41,8 @@ cp env-example .env
 
 Change the variable USER_NAME according your system username (it's for ssh folder mapping).
 Actually, you can edit the `.env` file to chose which software's you want to be installed in your environment. You can always refer to the `docker-compose.yml` file to see how those variables are been used.
-
+Add your user to docker group for avoiding leverage "sudo".
+Check path to your laravel project in supervisor configuration workspace/supervisor/laravel-queue-listen.conf
 
 2 - Build the environment and run it using `docker-compose`
 
