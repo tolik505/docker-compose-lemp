@@ -30,7 +30,8 @@ Some configurations can be changed in your environment file .env
 
 # How to use
 
-First of all, you need install [Docker Engine and Docker Compose](https://www.docker.com/) on your machine. 
+First of all, you need install [Docker Engine and Docker Compose](https://www.docker.com/) on your machine.
+Version of docker-composed must be 1.14.0 or newer. Add your user to docker group for avoiding leverage "sudo" `sudo usermod -aG docker $USER`.
 
 
 1 - Enter the folder of the cloned repository and copy `env-example` to `.env`
@@ -41,7 +42,6 @@ cp env-example .env
 
 Change the variable USER_NAME according your system username (it's for ssh folder mapping).
 Actually, you can edit the `.env` file to chose which software's you want to be installed in your environment. You can always refer to the `docker-compose.yml` file to see how those variables are been used.
-Add your user to docker group for avoiding leverage "sudo".
 Check path to your laravel project in supervisor configuration workspace/supervisor/laravel-queue-listen.conf
 
 2 - Build the environment and run it using `docker-compose`
