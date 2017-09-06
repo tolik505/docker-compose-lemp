@@ -159,6 +159,19 @@ services:
       networks:
         - backend
 
+### MailCatcher Container #####################################
+
+    mailcatcher:
+      build:
+        context: ./mailcatcher
+        args:
+          MAILCATCHER_VERSION: $VERSION
+      ports:
+        - "1025:1025"
+        - "1080:1080"
+      networks:
+        - backend
+
 ### Networks Setup ############################################
 
 networks:

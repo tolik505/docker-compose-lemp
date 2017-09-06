@@ -9,7 +9,7 @@ APPLICATION=../
 
 ### System user name
 
-USER_NAME=anatolii
+USER_NAME=kodilla
 
 ### Data Path:
 # For all storage systems.
@@ -94,7 +94,7 @@ MARIADB_PORT=3306
 MARIADB_ROOT_PASSWORD=root
 MARIADB_ENTRYPOINT_INITDB=./mariadb/docker-entrypoint-initdb.d
 
-### PHP MY ADMIN #######################################################################################################
+### PHPMYADMIN #########################################################################################################
 
 # Accepted values: mariadb - mysql
 
@@ -107,6 +107,9 @@ PMA_PASSWORD=secret
 PMA_ROOT_PASSWORD=root
 PMA_PORT=8080
 
+### MAILCATCHER ########################################################################################################
+
+VERSION=0.6.5
 
 ############################
 # Miscellaneous
