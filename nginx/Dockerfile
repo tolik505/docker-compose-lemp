@@ -7,6 +7,7 @@ ADD nginx.conf /etc/nginx/
 ARG PHP_UPSTREAM=php-fpm
 
 # fix a problem--#397, change application source from dl-cdn.alpinelinux.org to aliyun source.
+# or super fix from internety :) RUN sed -i -e 's/dl-cdn/dl-4/' /etc/apk/repositories
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/' /etc/apk/repositories
 
 RUN apk update \
